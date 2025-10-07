@@ -1,4 +1,4 @@
-# 🗂️ Distributed MapReduce System on AWS (Go + Gin + S3)
+# 🗂️ Distributed MapReduce System on AWS
 
 This project implements a **distributed MapReduce system** in **Go (Golang)**, using  
 **Amazon S3** for distributed storage, **Amazon ECR** for container image hosting,  
