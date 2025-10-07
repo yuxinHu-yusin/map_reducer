@@ -6,36 +6,11 @@ and **Amazon ECS with Fargate** for running containerized Splitter, Mapper, and 
 
 ---
 
-## ☁️ System Architecture
+## System Architecture
+<img width="561" height="546" alt="image" src="https://github.com/user-attachments/assets/7dc1949d-4f23-47d0-a47f-7a82cf5bdff6" />
 
-                   ┌────────────────────────┐
-                   │      Splitter Node     │
-                   │  (EC2 / ECS / Fargate) │
-                   └───────────┬────────────┘
-                               │
-                s3://<bucket>/doc.txt
-                               │
-                    ┌──────────▼──────────┐
-                    │      S3 Bucket      │
-                    │  splits/, maps/,    │
-                    │  reduce/ prefixes   │
-                    └──────────▲──────────┘
-                               │
-      ┌────────────────────────┼────────────────────────┐
-      │                        │                        │
-  ┌───▼───┐                ┌───▼───┐                ┌───▼───┐
-  │Mapper1│                │Mapper2│   ...          │MapperN│
-  └───┬───┘                └───┬───┘                └───┬───┘
-      │                        │                        │
-      └────────────────────────┬────────────────────────┘
-                               │                       
-                         ┌─────▼─────┐           
-                         │  Reducer  │           
-                         └───────────┘ 
-                               │ 
-                               ▼
-                         S3 Output File: `reduce/final.json`
 
+---
 ### 🧩 Workflow Summary
 1. **Dockerize** the Go service for Splitter, Mapper, and Reducer.  
 2. **Push** the image to **Amazon ECR** (Elastic Container Registry).  
@@ -50,16 +25,7 @@ and **Amazon ECS with Fargate** for running containerized Splitter, Mapper, and 
 ---
 
 ## 🧱 Project Structure
-
-map_reducer/
-├── main.go           # Main Go program (split/map/reduce logic)
-├── test.sh           # Bash script to automate split → map → reduce workflow
-├── Dockerfile        # Docker container setup
-├── go.mod            # Go module definition
-├── go.sum            # Dependency checksums
-├── hamlet.txt        # Example input text file
-├── final.json        # Example reducer output
-└── .gitignore        # Ignore sensitive and generated files
+<img width="635" height="216" alt="image" src="https://github.com/user-attachments/assets/2f798850-2866-47a5-a214-d27877c76965" />
 
 ---
 
