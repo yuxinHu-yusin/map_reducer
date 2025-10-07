@@ -75,24 +75,15 @@ MAPPER_IPS=("35.xxx.xx.xx" "54.xxx.xx.xx" "3.xxx.xx.xx")
 REDUCER_IP="3.xxx.xx.xx"
 
 
-#### （4）Run the Full Workflow from Local or Splitter Node
+#### (4) Run the Full Workflow from Local or Splitter Node
 
 chmod +x test.sh
 ./test.sh
 
 
 ## Example output:
-=== Split phase (3 parts) ===
-Split time: 353 ms
-=== Map phase ===
-Map time: 18 ms
-=== Reduce phase ===
-Reduce time: 366 ms
-=== Summary ===
-Split:  353 ms
-Map:    18 ms
-Reduce: 366 ms
-TOTAL:  737 ms
+<img width="352" height="233" alt="image" src="https://github.com/user-attachments/assets/41a45b35-32ff-42a8-8db9-e26b2f6c048f" />
+
 
 ---
 
