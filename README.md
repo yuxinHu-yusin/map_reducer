@@ -75,9 +75,7 @@ MAPPER_IPS=("35.xxx.xx.xx" "54.xxx.xx.xx" "3.xxx.xx.xx")
 REDUCER_IP="3.xxx.xx.xx"
 
 
----
-
-### 4️⃣ Run the Full Workflow from Local or Splitter Node
+#### （4）Run the Full Workflow from Local or Splitter Node
 
 chmod +x test.sh
 ./test.sh
