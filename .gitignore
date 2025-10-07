@@ -1,0 +1,41 @@
+# === Sensitive / Config files ===
+.env
+*.pem
+*.key
+*.crt
+*.json
+
+# === Output or intermediate data ===
+final.json
+splits/
+maps/
+reduce/
+output/
+
+# === Logs & temporary files ===
+*.log
+*.tmp
+*.out
+
+# === OS / Editor files ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === Go build artifacts ===
+/bin/
+/vendor/
+/dist/
+*.exe
+*.test
+*.prof
+
+
+
+# === Python cache (if used in helper scripts) ===
+__pycache__/
+*.pyc
+*.pyo
